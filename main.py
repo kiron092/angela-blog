@@ -156,7 +156,7 @@ def show_post(post_id):
     return render_template("post.html", post=requested_post, form=form, current_user=current_user)
 
 
-@app.route("/about")
+@app.route("/about/")
 def about():
     return render_template("about.html", current_user=current_user)
 
@@ -220,4 +220,6 @@ def delete_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    #app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
+
